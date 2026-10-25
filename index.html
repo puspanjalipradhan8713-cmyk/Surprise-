@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little World for Buggu ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<>
+
+    <div id="stars"></div>
+
+    <header>
+        <h3>A Little World for Buggu ♡</h3>
+        <button id="musicBtn">♫</button>
+    </header>
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+    <>
+
+        <!-- SCREEN 1 -->
+        <section class="screen active" id="welcome">
+            <div class="moon">☾</div>
+            <div class="heart">♡</div>
+
+            <h1>Hey, Buggu! 💙</h1>
+
+            <p>
+                You weren't supposed to find anything
+                special today... 🫣
+                <br><br>
+                But someone made a little something
+                just for you. ✨
+            </p>
+
+            <button onclick="nextScreen('question')">
+                Discover Your Surprise →
+            </button>
+        </section>
+
+        <!-- SCREEN 2 -->
+        <section class="screen" id="question">
+
+            <h2>Buggu, ek baat batao...</h2>
+
+            <p>Do you know how special you are? 💙</p>
+
+            <button onclick="answer('yes')">YES 😎</button>
+            <button onclick="answer('no')">NO 🥹</button>
+
+            <p id="answerMessage"></p>
+
+            <button id="questionNext"
+                    class="hidden"
+                    onclick="nextScreen('gift')">
+                Next Surprise →
+            </button>
+
+        </section>
+
+        <!-- SCREEN 3 -->
+        <section class="screen" id="gift">
+
+            <h2>Ek chhota sa surprise! 🎁</h2>
+
+            <div id="giftBox" onclick="openGift()">🎁</div>
+
+            <p id="giftMessage">
+                Gift box par click karo, Buggu! 💙
+            </p>
+
+            <button id="giftNext"
+                    class="hidden"
+                    onclick="nextScreen('letter')">
+                Open Your Letter 💌 →
+            </button>
+
+        </section>
+
+        <!-- SCREEN 4 -->
+        <section class="screen" id="letter">
+
+            <div class="letter">
+                <h2>A Letter for You ♡</h2>
+
+                <p>Dear Buggu, 💙</p>
+
+                <p>
+                    Pata hai, tum meri life mein
+                    ek special place rakhte ho.
+                    Tumhari smile, tumhari baatein
+                    aur tumhara silly side mere
+                    din ko better bana dete hain.
+                </p>
+
+                <p>
+                    Life hamesha perfect nahi hoti,
+                    but I hope tumhe yaad rahe ki
+                    you matter, you are appreciated,
+                    aur tumhare hone se duniya
+                    thodi aur achhi lagti hai. ✨
+                </p>
+
+                <p>
+                    Bas aise hi apne aap jaise rehna.
+                    or kabhi sad nhi hona me hamesha tere sath hu,bacha
+                    Keep smiling, Buggu! 🫶
+                </p>
+
+                <p class="signature">
+                    — Someone who cares about you ♡
+                </p>
+            </div>
+
+            <button onclick="nextScreen('mood')">
+                One More Thing →
+            </button>
+
+        </section>
+
+        <!-- SCREEN 5 -->
+        <section class="screen" id="mood">
+
+            <h2>Let's be real... 🌙</h2>
+
+            <p>Aaj tumhara mood kaisa hai, Buggu?</p>
+
+            <div class="moods">
+                <button onclick="selectMood('gaming')">
+                    🎮 Gaming Mood
+                </button>
+
+                <button onclick="selectMood('chill')">
+                    ☕ Chill & Relax
+                </button>
+
+                <button onclick="selectMood('study')">
+                    💻 Study Mode
+                </button>
+
+                <button onclick="selectMood('happy')">
+                    ☺ Just Happy
+                </button>
+            </div>
+
+            <p id="moodMessage"></p>
+
+            <button id="moodNext"
+                    class="hidden"
+                    onclick="nextScreen('final')">
+                Final Surprise ✨
+            </button>
+
+        </section>
+
+    <!-- FINAL SURPRISE FOR BUGGU -->
+<section class="screen" id="final">
+    <div class="heart">💗</div>
+
+    <h1>One Last Thing, Buggu... 🌙</h1>
+
+    <p>
+        Tum mere liye bahut special ho. 🥹💙
+        <br><br>
+        Hamesha khush rehna aur aise hi smile karte rehna.
+        🫶✨
+    </p>
+
+    <div class="love-box">
+        <h2>I LOVE YOU SO MUCH, BACHA ❤️</h2>
+        <p>Forever my special person. 💌</p>
+    </div>
+
+    <p>THE END ♡</p>
+</section>
